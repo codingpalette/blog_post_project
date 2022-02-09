@@ -18,6 +18,57 @@ export const TodoContainer = styled.div`
     justify-content: center;
     gap: 1rem;
   }
+
+  .todo_list_box {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+      width: 100%;
+      max-width: 750px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      .content {
+        display: flex;
+        align-items: center;
+        padding: 7.5px 14px;
+        background-color: #eee;
+        box-sizing: border-box;
+        border-radius: 4px;
+        gap: 5px;
+      }
+
+      .button_box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        button {
+          padding: 0.2rem 0.5rem;
+          box-sizing: border-box;
+          border-radius: 4px;
+          color: #fff;
+        }
+
+        .modify_btn {
+          background-color: #94a3b8;
+        }
+
+        .delete_btn {
+          background-color: #ef4444;
+        }
+      }
+    }
+    li + li {
+      margin-top: 15px;
+    }
+  }
 `
 
 export const TodoButton = styled.button`
