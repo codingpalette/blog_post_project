@@ -66,10 +66,7 @@ const TodoPage = () => {
     // map 함수를 이용해서 불변성을 유지하고 새로운 배열을 만들어서 수정한다.
     setTodoList(
       todoList.map(todo => {
-        if (todo.id === listId) {
-          todo.content = modifyInputState
-        }
-        return todo
+        return todo.id === listId ? { ...todo, content: modifyInputState } : todo
       }),
     )
     onClickModifyModalClose()
